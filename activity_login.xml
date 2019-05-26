@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginactivitycolor"
+    tools:context=".Login">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/Twenty_dp">
+            <android.support.v7.widget.CardView
+                android:id="@+id/logincardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/Twenty_dp"
+                app:cardElevation="0dp"
+                app:contentPadding="@dimen/Ten_dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Five_dp"
+                    android:layout_marginBottom="@dimen/Ten_dp"
+                    android:text="Smart Tollbooth"
+                    android:textAlignment="center"
+                    android:textColor="#303F9F"
+                    android:textSize="@dimen/Twenty_dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etUserNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="false">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User Name"
+                        android:inputType="number"
+                        android:maxLength="10"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etUserPwLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Ten_dp"
+                    app:passwordToggleEnabled="true">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etUserPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/FortyFive_dp"
+                    android:layout_marginBottom="@dimen/Ten_dp"
+                    android:layout_marginTop="@dimen/Twenty_dp"
+                    android:background="@drawable/roundedbuttonlogin"
+                    android:padding="@dimen/Ten_dp"
+                    android:text="Login"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvsingup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Five_dp"
+                    android:layout_marginRight="@dimen/Two_dp"
+                    android:layout_marginBottom="@dimen/Ten_dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:textSize="@dimen/Sixteen_dp"
+                    android:text="Create New Account"/>
+                <TextView
+                    android:id="@+id/tvAppInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="@dimen/Ten_dp"
+                    android:text="Version 1.0"/>
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/tollplaza"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

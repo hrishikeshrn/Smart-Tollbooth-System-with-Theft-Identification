@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/Activity_PadddingTop"
+    android:background="@color/activityBgcolor"
+    tools:context=".ComplainRegister">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/Ten_dp">
+            <android.support.v7.widget.CardView
+                android:id="@+id/logincardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/Fifteen_dp"
+                app:cardElevation="0dp"
+                app:contentPadding="@dimen/Seven_dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/Five_dp"
+                        android:layout_marginBottom="@dimen/Twenty_dp"
+                        android:text="Register Complain"
+                        android:textAlignment="center"
+                        android:textColor="@color/themeBG"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/Twenty_dp" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edregName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/Ten_dp"
+                        android:layout_marginTop="@dimen/Two_dp"
+                        android:layout_marginRight="@dimen/Ten_dp"
+                        android:digits="_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@.-()*+/% "
+                        android:hint="Enter Vehicle No"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:paddingRight="@dimen/Ten_dp"
+                        android:singleLine="true"
+                        android:textColorHighlight="@color/themeBG"
+                        android:textColorHint="@color/themeBG"
+                        android:textSize="@dimen/normal_text"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelAlwaysShown="false"
+                        app:met_floatingLabelAnimating="true"
+                        app:met_textColorHint="@color/themeBG" />
+
+                    <Button
+                        android:id="@+id/btnRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/TwentyFive_dp"
+                        android:background="@drawable/roundedbutton"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/Sixteen_dp"
+                        android:text="Register"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

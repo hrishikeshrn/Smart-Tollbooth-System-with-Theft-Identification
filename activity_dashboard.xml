@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="70dp"
+    tools:context=".Dashboard">
+<!--<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/FortyFour_dp"
+            android:layout_marginBottom="@dimen/Five_dp">
+            <Spinner
+                android:id="@+id/spRoutes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:spinnerMode="dialog"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/FortyFour_dp"
+            android:layout_marginBottom="@dimen/Five_dp"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spTolls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:spinnerMode="dialog"
+                android:layout_weight="0.4"/>
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pay Toll"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <fragment
+                android:id="@+id/mapNearBy"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:src="@drawable/currentlocation"
+        app:backgroundTint="#ffffff"/>
+
+</RelativeLayout>

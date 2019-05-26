@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/Activity_PadddingTop"
+    android:background="@color/activityBgcolor"
+    tools:context=".PaymentHistory">
+    <TextView
+        android:id="@+id/tvhead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Fifty_dp"
+        android:layout_marginTop="@dimen/Five_dp"
+        android:text="Payment History"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:background="@android:color/white"
+        android:textColor="@color/themeBG"
+        android:textStyle="bold"
+        android:textSize="@dimen/Twenty_dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dip"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal">
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="5dip"
+            android:scrollbars="horizontal">
+            <TableLayout
+                android:id="@+id/table_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"/>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
